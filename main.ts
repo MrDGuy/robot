@@ -350,10 +350,24 @@ namespace robot {
 
     //%block
     export function changeRobot(up: Image, down: Image, left: Image, right: Image){
+        
         robotUp = up
         robotDown = down
         robotLeft = left
         robotRight = right
+        if (direction == 0) {
+            robotSprite.setImage(robotUp)
+        }
+        else if (direction == 1){
+            robotSprite.setImage(robotRight)
+        }
+        else if (direction == 2){
+            robotSprite.setImage(robotDown)
+        }
+        else{
+            robotSprite.setImage(robotLeft)
+        }
+        
     }
 
     //%block
